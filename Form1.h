@@ -17,7 +17,7 @@ namespace CppCLRWinformsProjekt {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Zusammenfassung für Form1
+	
 	/// </summary>
 	public ref class Form1 : public System::Windows::Forms::Form
 	{
@@ -26,14 +26,14 @@ namespace CppCLRWinformsProjekt {
 		{
 			InitializeComponent();
 			//
-			//TODO: Konstruktorcode hier hinzufügen.
+			//TODO: 
 			//
 			Size = Size1 = Size2 = Size3 = Size4 = Size5 = 0;
 		}
 
 	protected:
 		/// <summary>
-		/// Verwendete Ressourcen bereinigen.
+		
 		/// </summary>
 		~Form1()
 		{
@@ -77,14 +77,12 @@ namespace CppCLRWinformsProjekt {
 
 
 
-		   /// Erforderliche Designervariable.
+		  
 		/// </summary>
 		   System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		   /// <summary>
-		   /// Erforderliche Methode für die Designerunterstützung.
-		   /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
 		   /// </summary>
 		   void InitializeComponent(void)
 		   {
@@ -325,13 +323,13 @@ namespace CppCLRWinformsProjekt {
 		   }
 #pragma endregion
 	private: System::Void pictureBox1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-		//Ana eksen dogrularýný cizdir
+		//Ana eksen dogrularÃ½nÃ½ cizdir
 		Pen^ pen = gcnew Pen(Color::Black, 3.0f);
 		int center_width, center_height;
-		//merkez picture box ýn tam ortasý olsun istiyoruz bu yüzden picture box ýn geniþliði ve yüksekliðinin yarýsýný aldýk
+		//merkez picture box Ã½n tam ortasÃ½ olsun istiyoruz bu yÃ¼zden picture box Ã½n geniÃ¾liÃ°i ve yÃ¼ksekliÃ°inin yarÃ½sÃ½nÃ½ aldÃ½k
 		center_width = (int)(pictureBox1->Width / 2);
 		center_height = (int)(pictureBox1->Height / 2);
-		//koordinat sistemi çizdircez
+		//koordinat sistemi Ã§izdircez
 		e->Graphics->DrawLine(pen, center_width, 0, center_width, pictureBox1->Height);
 		e->Graphics->DrawLine(pen, 0, center_height, pictureBox1->Width, center_height);
 	}
@@ -339,7 +337,7 @@ namespace CppCLRWinformsProjekt {
 	private: System::Void pictureBox1_MouseClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
 		if (check_Class1->Checked || check_Class2->Checked || check_Class3->Checked || check_Class4->Checked || check_Class5->Checked) {
 			if (check_Class1->Checked && check_Class2->Checked && check_Class3->Checked && check_Class4->Checked && check_Class5->Checked) {
-				MessageBox::Show("Her iki sýnýf türü ayný anda seçilemez");
+				MessageBox::Show("Her iki sÃ½nÃ½f tÃ¼rÃ¼ aynÃ½ anda seÃ§ilemez");
 				check_Class1->Checked = false;
 				check_Class2->Checked = false;
 				check_Class3->Checked = false;
@@ -389,7 +387,7 @@ namespace CppCLRWinformsProjekt {
 					pictureBox1->CreateGraphics()->DrawLine(pen, temp_x - 5, temp_y, temp_x + 5, temp_y);
 					pictureBox1->CreateGraphics()->DrawLine(pen, temp_x, temp_y - 5, temp_x, temp_y + 5);
 					label2->Text = "Samples Total: " + Convert::ToString(Size) + "Class 1: " + Convert::ToString(Size1);
-				}//Class1 için
+				}//Class1 iÃ§in
 
 				else if (check_Class2->Checked) {
 					Pen^ pen = gcnew Pen(Color::Red, 3.0f);
@@ -573,7 +571,7 @@ namespace CppCLRWinformsProjekt {
 			}
 		}
 		else {
-			MessageBox::Show("Öncelikle örneklerin etiketini belirlemek için ilgili sýnýfýn etiketini seçin.");
+			MessageBox::Show("Ã–ncelikle Ã¶rneklerin etiketini belirlemek iÃ§in ilgili sÃ½nÃ½fÃ½n etiketini seÃ§in.");
 		}
 	}
 	private: System::Void randomlyToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
